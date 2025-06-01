@@ -1,0 +1,28 @@
+.membersList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.7rem;
+}
+.memberChip {
+  background: var(--primary-light, #a5b4fc)22;
+  color: var(--primary, #6366f1);
+  border-radius: 1rem;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.98rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  border: 1px solid var(--primary-light, #a5b4fc);
+}
+.memberChip button {
+  background: transparent;
+  border: none;
+  color: #d32f2f;
+  font-size: 1.1rem;
+  margin-left: 0.3rem;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
+  line-height: 1;
+}

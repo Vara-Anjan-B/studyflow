@@ -1,0 +1,49 @@
+:root {
+  --notif-badge-bg: #d32f2f;
+  --notif-badge-text: #fff;
+}
+
+[data-theme="dark"] {
+  --notif-badge-bg: #ff7b72;
+  --notif-badge-text: #23272f;
+}
+
+.bellWrapper {
+  position: relative;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.18s;
+  color: var(--primary, #6366f1);
+}
+
+.bellWrapper:focus,
+.bellWrapper:hover {
+  color: var(--primary-light, #a5b4fc);
+  outline: none;
+}
+
+.bell {
+  font-size: 1.6rem;
+  display: inline-block;
+}
+
+.badge {
+  position: absolute;
+  top: -7px;
+  right: -9px;
+  background: var(--notif-badge-bg);
+  color: var(--notif-badge-text);
+  border-radius: 50%;
+  font-size: 0.85rem;
+  padding: 2px 7px;
+  font-weight: 700;
+  box-shadow: 0 1px 4px var(--notif-badge-bg)44;
+  border: 2px solid var(--card-bg, #fff);
+  min-width: 24px;
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+}

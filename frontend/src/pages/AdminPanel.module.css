@@ -1,0 +1,82 @@
+:root {
+  --bg: #f6f8fa;
+  --card-bg: #fff;
+  --text: #1a1a1a;
+  --primary: #6366f1;
+  --primary-light: #a5b4fc;
+  --border: #e0e7ff;
+  --error-bg: #fff0f0;
+  --error: #d32f2f;
+}
+[data-theme="dark"] {
+  --bg: #181a1b;
+  --card-bg: #23272f;
+  --text: #f3f3f3;
+  --primary: #818cf8;
+  --primary-light: #6366f1;
+  --border: #282c34;
+  --error-bg: #3d2323;
+  --error: #ff7b72;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+.card {
+  background: var(--card-bg);
+  padding: 2.5rem 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 32px rgba(80, 80, 200, 0.12);
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+h2 {
+  text-align: center;
+  color: var(--primary);
+  font-size: 1.35rem;
+  margin-bottom: 1.2rem;
+}
+.error {
+  color: var(--error);
+  background: var(--error-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.table th, .table td {
+  padding: 0.7rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.table th {
+  background: var(--primary-light)22;
+  color: var(--primary);
+  font-weight: 700;
+}
+.deleteBtn {
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.98rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.deleteBtn:hover {
+  background: #b71c1c;
+}

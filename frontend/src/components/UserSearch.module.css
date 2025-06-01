@@ -1,0 +1,100 @@
+:root {
+  --bg: #f6f8fa;
+  --card-bg: #fff;
+  --text: #1a1a1a;
+  --primary: #6366f1;
+  --primary-light: #a5b4fc;
+  --border: #e0e7ff;
+}
+
+[data-theme="dark"] {
+  --bg: #16181c;
+  --card-bg: #23272f;
+  --text: #f3f3f3;
+  --primary: #a5b4fc;
+  --primary-light: #6366f1;
+  --border: #282c34;
+}
+
+.searchBox {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 0.5rem;
+  font-size: 1.05rem;
+  background: var(--bg);
+  color: var(--text);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+  border: 1.5px solid var(--primary);
+  outline: none;
+  box-shadow: 0 2px 8px var(--primary-light)33;
+}
+
+.loading {
+  font-size: 0.97rem;
+  color: #888;
+  margin-top: 0.2rem;
+}
+
+.results {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: var(--card-bg);
+  border: 1.5px solid var(--border);
+  border-radius: 0.5rem;
+  margin-top: 0.3rem;
+  z-index: 10;
+  list-style: none;
+  padding: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: 0 2px 12px #6366f122;
+}
+
+.results li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  transition: background 0.17s, color 0.17s;
+  color: var(--text);
+}
+
+.results li:hover,
+.results li:focus {
+  background: var(--primary-light)22;
+  color: var(--primary);
+  outline: none;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--primary-light);
+  background: #f3f3f3;
+}
+
+.name {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.email {
+  color: #888;
+  font-size: 0.97rem;
+  margin-left: auto;
+}

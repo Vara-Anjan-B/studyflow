@@ -1,0 +1,252 @@
+:root {
+  --bg: #f6f8fa;
+  --card-bg: #fff;
+  --text: #1a1a1a;
+  --primary: #6366f1;
+  --primary-light: #a5b4fc;
+  --border: #e0e7ff;
+  --error-bg: #fff0f0;
+  --error: #d32f2f;
+}
+
+[data-theme="dark"] {
+  --bg: #16181c;
+  --card-bg: #23272f;
+  --text: #f3f3f3;
+  --primary: #a5b4fc;
+  --primary-light: #6366f1;
+  --border: #282c34;
+  --error-bg: #3d2323;
+  --error: #ff7b72;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 2.5rem 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 32px rgba(80, 80, 200, 0.12);
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+h2 {
+  text-align: center;
+  color: var(--primary);
+  font-size: 1.35rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.content {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.userList {
+  width: 170px;
+  border-right: 1.5px solid var(--border);
+  padding-right: 1rem;
+  min-width: 120px;
+}
+
+.userList h3 {
+  color: var(--primary);
+  font-size: 1.08rem;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.5px;
+}
+
+.userList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.userList li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  padding: 0.45rem 0.2rem;
+  border-radius: 0.5rem;
+  transition: background 0.18s, color 0.18s;
+  color: var(--text);
+}
+
+.userList li:hover,
+.selectedUser {
+  background: var(--primary-light)22;
+  color: var(--primary);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--primary-light);
+  background: #f3f3f3;
+}
+
+.chatSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.08rem;
+  border-bottom: 1.5px solid var(--border);
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.messagesList {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-height: 220px;
+  max-height: 260px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-light) var(--bg);
+}
+
+.myMsg {
+  align-self: flex-end;
+  background: var(--primary-light);
+  color: #fff;
+  border-radius: 0.7rem 0.7rem 0.2rem 0.7rem;
+  padding: 0.5rem 1rem;
+  max-width: 70%;
+  font-size: 1.03rem;
+  position: relative;
+  box-shadow: 0 1px 4px var(--primary-light)33;
+  word-break: break-word;
+}
+
+.theirMsg {
+  align-self: flex-start;
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1.5px solid var(--border);
+  border-radius: 0.7rem 0.7rem 0.7rem 0.2rem;
+  padding: 0.5rem 1rem;
+  max-width: 70%;
+  font-size: 1.03rem;
+  position: relative;
+  box-shadow: 0 1px 4px var(--primary-light)11;
+  word-break: break-word;
+}
+
+.msgTime {
+  display: block;
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 0.2rem;
+  text-align: right;
+}
+
+.msgForm {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.msgForm input {
+  flex: 1;
+  padding: 0.55rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: var(--bg);
+  color: var(--text);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.msgForm input:focus {
+  border: 1.5px solid var(--primary);
+  outline: none;
+  box-shadow: 0 2px 8px var(--primary-light)33;
+}
+
+.msgForm button {
+  padding: 0.5rem 1.1rem;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.23s;
+}
+
+.msgForm button:hover {
+  background: var(--primary-light);
+}
+
+.noChat {
+  color: #888;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.04rem;
+}
+
+.error {
+  color: var(--error);
+  background: var(--error-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .card {
+    padding: 1.2rem 0.5rem;
+    max-width: 99vw;
+    border-radius: 0.8rem;
+  }
+  .content {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .userList {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1.5px solid var(--border);
+    padding-right: 0;
+    padding-bottom: 1rem;
+    min-width: 0;
+  }
+  .chatSection {
+    min-width: 0;
+  }
+  .messagesList {
+    max-height: 200px;
+  }
+}

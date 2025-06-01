@@ -1,0 +1,314 @@
+:root {
+  --bg: #f6f8fa;
+  --card-bg: #fff;
+  --text: #1a1a1a;
+  --primary: #6366f1;
+  --primary-light: #a5b4fc;
+  --border: #e0e7ff;
+  --success-bg: #e8f5e9;
+  --success: #388e3c;
+  --error-bg: #fff0f0;
+  --error: #d32f2f;
+}
+
+[data-theme="dark"] {
+  --bg: #181a1b;
+  --card-bg: #23272f;
+  --text: #f3f3f3;
+  --primary: #a5b4fc;
+  --primary-light: #6366f1;
+  --border: #282c34;
+  --success-bg: #223d2b;
+  --success: #7ee787;
+  --error-bg: #3d2323;
+  --error: #ff7b72;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 2.5rem 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 32px rgba(80, 80, 200, 0.12);
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+h2 {
+  text-align: center;
+  color: var(--primary);
+  font-size: 1.35rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.roomsSection {
+  float: left;
+  width: 230px;
+  min-width: 180px;
+  border-right: 1.5px solid var(--border);
+  padding-right: 1.2rem;
+}
+
+.roomsSection h3 {
+  color: var(--primary);
+  font-size: 1.08rem;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.5px;
+}
+
+.roomsSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.2rem 0;
+}
+
+.roomsSection li {
+  padding: 0.55rem 0.7rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.3rem;
+  cursor: pointer;
+  color: var(--text);
+  font-weight: 600;
+  transition: background 0.18s, color 0.18s;
+}
+
+.roomsSection li:hover,
+.selectedRoom {
+  background: var(--primary-light)22;
+  color: var(--primary);
+}
+
+.createRoomForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+}
+
+.createRoomForm input[type="text"] {
+  padding: 0.7rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: var(--card-bg);
+  color: var(--text);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.createRoomForm input[type="text"]:focus {
+  border: 1.5px solid var(--primary);
+  outline: none;
+  box-shadow: 0 2px 8px var(--primary-light)33;
+}
+
+.membersList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.memberLabel {
+  font-size: 0.98rem;
+  color: var(--text);
+  background: var(--bg);
+  border-radius: 0.4rem;
+  padding: 0.2rem 0.7rem;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  user-select: none;
+}
+
+.memberChip {
+  background: var(--primary-light)22;
+  color: var(--primary);
+  border-radius: 1rem;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.98rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  border: 1px solid var(--primary-light);
+}
+.memberChip button {
+  background: transparent;
+  border: none;
+  color: #d32f2f;
+  font-size: 1.1rem;
+  margin-left: 0.3rem;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
+  line-height: 1;
+}
+
+.createRoomForm button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.createRoomForm button:hover {
+  background: var(--primary-light);
+}
+
+.chatSection {
+  margin-left: 250px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  position: relative;
+}
+
+.chatHeader {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.08rem;
+  border-bottom: 1.5px solid var(--border);
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.messagesList {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-height: 220px;
+  max-height: 260px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-light) var(--bg);
+}
+
+.myMsg {
+  align-self: flex-end;
+  background: var(--primary);
+  color: var(--card-bg);
+  border-radius: 0.7rem 0.7rem 0.2rem 0.7rem;
+  padding: 0.5rem 1rem;
+  max-width: 70%;
+  font-size: 1.03rem;
+  position: relative;
+  margin-bottom: 0.2rem;
+  box-shadow: 0 1px 4px var(--primary-light)33;
+  word-break: break-word;
+}
+
+.theirMsg {
+  align-self: flex-start;
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1.5px solid var(--border);
+  border-radius: 0.7rem 0.7rem 0.7rem 0.2rem;
+  padding: 0.5rem 1rem;
+  max-width: 70%;
+  font-size: 1.03rem;
+  position: relative;
+  margin-bottom: 0.2rem;
+  box-shadow: 0 1px 4px var(--primary-light)11;
+  word-break: break-word;
+}
+
+.msgAuthor {
+  font-weight: 700;
+  color: var(--primary);
+  margin-right: 0.5rem;
+}
+
+.msgTime {
+  display: block;
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 0.2rem;
+  text-align: right;
+}
+
+.msgForm {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.msgForm input {
+  flex: 1;
+  padding: 0.55rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: var(--bg);
+  color: var(--text);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.msgForm input:focus {
+  border: 1.5px solid var(--primary);
+  outline: none;
+  box-shadow: 0 2px 8px var(--primary-light)33;
+}
+
+.msgForm button {
+  padding: 0.5rem 1.1rem;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.23s;
+}
+.msgForm button:hover {
+  background: var(--primary-light);
+}
+
+.noChat {
+  color: #888;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.04rem;
+}
+
+@media (max-width: 900px) {
+  .card {
+    flex-direction: column;
+    max-width: 99vw;
+    padding: 1rem 0.2rem;
+  }
+  .roomsSection {
+    float: none;
+    width: 100%;
+    border-right: none;
+    padding-right: 0;
+    margin-bottom: 1.3rem;
+  }
+  .chatSection {
+    margin-left: 0;
+    height: 340px;
+  }
+}
