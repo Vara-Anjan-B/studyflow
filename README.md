@@ -45,7 +45,7 @@ A modern full-stack productivity and collaboration platform for students, teams,
 ### 1. Clone the repository
 
 
-git clone https://github.com/yourusername/studyflow.git
+git clone https://github.com/Vara-Anjan=B/studyflow.git
 cd studyflow
 
 ### 2. Install dependencies
