@@ -45,7 +45,7 @@ A modern full-stack productivity and collaboration platform for students, teams,
 ### 1. Clone the repository
 
 
-git clone https://github.com/Vara-Anjan=B/studyflow.git
+git clone https://github.com/Vara-Anjan-B/studyflow.git
 cd studyflow
 
 ### 2. Install dependencies
@@ -69,6 +69,11 @@ Create a `.env` file in the `backend` folder with:
 
 MONGO_URI=your_mongodb_atlas_connection_string
 JWT_SECRET=your_jwt_secret
+SMTP_HOST=your_SMTP_HOST;
+SMTP_PORT=your_SMTP_PORT;
+SMTP_USER=your_SMTP_USER;
+SMTP_PASS=your_SMTP_PASS
+FRONTEND_URL=your_frontend_url
 
 In the `frontend` folder, create a `.env` file:
 
@@ -102,6 +107,13 @@ npm start
 ## 📸 Screenshots
 
 <!-- Add screenshots here if you have them -->
+![Screenshot 2025-06-05 170312](https://github.com/user-attachments/assets/fd7ff202-cdda-4390-88e1-85e2bae99224)
+![Screenshot 2025-06-05 170950](https://github.com/user-attachments/assets/15b1baa7-1987-4e39-ab3d-498184783147)
+![Screenshot 2025-06-05 171019](https://github.com/user-attachments/assets/53dc6567-d668-4ca2-923a-d7a72cedb97a)
+![Screenshot 2025-06-05 171056](https://github.com/user-attachments/assets/ebe672da-e5a9-4e25-b03f-9c4441454a01)
+![Screenshot 2025-06-05 171129](https://github.com/user-attachments/assets/de783c3d-a3ae-4759-a851-62b6436abb80)
+![Screenshot 2025-06-05 171248](https://github.com/user-attachments/assets/8b412777-f672-439f-8c0f-5c53069006d3)
+![Screenshot 2025-06-05 171728](https://github.com/user-attachments/assets/06360166-9ff6-448c-85b5-f4f6cc732d9e)
 
 ---
 
