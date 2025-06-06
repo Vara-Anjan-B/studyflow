@@ -7,7 +7,7 @@ A modern full-stack productivity and collaboration platform for students, teams,
 
 ## 🚀 Live Demo
 
-[https://your-live-demo-link.com]([https://your-live-demo-link.com](https://studyflow-one.vercel.app/))
+([https://studyflow-one.vercel.app/](https://studyflow-one.vercel.app/))
 
 ---
 
