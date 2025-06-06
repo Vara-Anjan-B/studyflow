@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styles from './Register.module.css';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+// Always use the environment variable, don't fallback to localhost in production
+const API_URL = process.env.REACT_APP_API_URL;
 
 function Register() {
   const navigate = useNavigate();
@@ -27,6 +28,7 @@ function Register() {
     setError('');
     setLoading(true);
     try {
+      // Always use /auth/register relative to API_URL, which should include /api
       const res = await fetch(`${API_URL}/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -38,7 +40,7 @@ function Register() {
         setMsg(data.message || 'Registration successful!');
         setTimeout(() => navigate('/login'), 2000);
       }
-    } catch {
+    } catch (err) {
       setError('Network error.');
     } finally {
       setLoading(false);
