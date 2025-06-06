@@ -6,6 +6,7 @@ import { useTheme } from '../contexts/ThemeContext';
 import NotificationBell from './NotificationBell';
 import NotificationDropdown from './NotificationDropdown';
 import { NotificationProvider } from '../contexts/NotificationContext';
+import Footer from './Footer';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 const BACKEND_URL = API_URL.replace(/\/api$/, '');
@@ -236,6 +237,7 @@ function Layout() {
         <main className={styles.mainContent}>
           <Outlet />
         </main>
+        <Footer />
       </div>
     </NotificationProvider>
   );

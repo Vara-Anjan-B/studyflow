@@ -60,4 +60,16 @@ body {
   color: var(--text);
   transition: background 0.3s, color 0.3s;
 }
+.appContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg, #f6f8fa);
+}
+
+.mainContent {
+  flex: 1;
+  /* Optionally add padding */
+  padding: 2rem 1rem;
+}
 
