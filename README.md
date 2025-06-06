@@ -130,9 +130,8 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ---
 
-## 📎 Links for Your Resume
+## 📎 Links for Your CODE
 
-- **Live:** [https://your-live-demo-link.com](https://your-live-demo-link.com)
 - **Code:** [https://github.com/Vara-Anjan-B/studyflow](https://github.com/Vara-Anjan-B/studyflow)
 
 ---
